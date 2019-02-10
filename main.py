@@ -23,7 +23,7 @@ from scrape_history import *
 options = Options()
 options.headless = True # go headless
 dir_path = os.path.dirname(os.path.realpath(__file__))
-path_driver = os.path.join(dir_path,'firefox_mac')
+path_driver = os.path.join(dir_path,'Drivers/firefox_mac')
 browser = webdriver.Firefox(options=options, executable_path=path_driver)
 
 
