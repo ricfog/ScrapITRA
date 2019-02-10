@@ -1,36 +1,19 @@
 '''
- retrieve nationalities available
+Retrieve list of available nationalities
+
+@author: rfogliat@andrew.cmu.edu
+
 '''
 
-
-import sys
-from selenium import webdriver
-import time
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.keys import Keys
+from import_modules import *
 
 
 def retrieve_nat(webpage, browser=None):
 
 
-    if browser:
-        pass
-
-    else:
-        browser = webdriver.Chrome(executable_path='/Users/franco.fogliato/Desktop/chromedriver')
-        browser.get(webpage)
-
-
     el = browser.find_element_by_id('nat')
-    l = []
+    list_nat = []
     for option in el.find_elements_by_tag_name('option')[1:]:
-        l.append(option.text)
+        list_nat.append(option.text)
 
-    return(l)
-
-
-if __name__=='__main__':
-    retrieve_nat('https://itra.run/community/')
+    return list_nat
