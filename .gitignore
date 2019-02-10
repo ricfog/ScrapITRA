@@ -1,2 +1,4 @@
 *~
 *.csv
+*.log
+__psycache__
