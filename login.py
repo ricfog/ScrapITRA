@@ -7,7 +7,7 @@ Login into website
  '''
 
 
-from import_modules import *
+from ScrapITRA.import_modules import *
 
 
 def login(username, password, browser):
@@ -25,3 +25,4 @@ def login(username, password, browser):
     browser.find_element_by_class_name('btn').click()
 
 
+__all__ = ['login']

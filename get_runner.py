@@ -7,7 +7,7 @@ get list of available runners
 '''
 
 
-from import_modules import *
+from ScrapITRA.import_modules import *
 
 
 

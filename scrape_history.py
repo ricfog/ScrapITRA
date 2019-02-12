@@ -7,7 +7,7 @@ Scrape individual track record
 '''
 
 
-from import_modules import *
+from ScrapITRA.import_modules import *
 
 
 
@@ -29,11 +29,11 @@ def scrape_history(webpage, browser):
     WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, 'tabpalm')))
 
 
-    
+
     # import and process in BeautifulSoup
     bs = BeautifulSoup(browser.page_source, 'lxml')
 
-    
+
     # scrape record
     table = bs.find('table', {'id':'tabpalm'})
     table_rows = table.find_all('tr')
@@ -46,7 +46,7 @@ def scrape_history(webpage, browser):
         row.insert(0,webpage)
         record.append(row[0:8])
 
-        
+
     # scrape performance
     table = bs.find("tbody", {"id": "tabraceip"})
     table_rows = table.find_all('tr')
@@ -59,7 +59,5 @@ def scrape_history(webpage, browser):
         row[0] = webpage
         performance.append(row[0:9])
 
-        
+
     return (record, performance)
-
-
