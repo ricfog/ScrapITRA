@@ -23,6 +23,3 @@ def login(username, password, browser):
     password_box.send_keys(password)
 
     browser.find_element_by_class_name('btn').click()
-
-
-__all__ = ['login']
