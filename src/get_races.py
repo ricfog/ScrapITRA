@@ -4,10 +4,20 @@ scrape races
 
 '''
 
-from ScrapITRA.import_modules import *
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.keys import Keys
+import os
+import time
+import csv
 
 
-def get_races(browser, start_date, end_date):
+
+def get_races(browser, start_date, end_date, path=None):
 
     browser.get('https://itra.run/page/328/Results.html')
     WebDriverWait(browser, 100).until(EC.presence_of_element_located((By.ID, 'cal')))
@@ -79,5 +89,12 @@ def get_races(browser, start_date, end_date):
         time.sleep(10)
         max_page = int(float(browser.find_element_by_id('nbpmax').text))
         page_n += 1
+
+    if path:
+        with open(path, 'w') as f:
+            writer_f = csv.writer(f)
+            for item in store_race:
+                writer_f.writerows(item)
+
 
     return store_race

@@ -6,12 +6,16 @@
 
 '''
 
-from ScrapITRA.import_modules import *
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+import os
 
 
-def get_browser(webpage):
+
+
+def get_browser(webpage, head=True):
     options = Options()
-    options.headless = True # go headless
+    options.headless = head # go headless
     dir_path = os.path.dirname(os.path.realpath(__file__))
     path_driver = os.path.join(dir_path,'Drivers/firefox_mac')
     browser = webdriver.Firefox(options=options, executable_path=path_driver)
