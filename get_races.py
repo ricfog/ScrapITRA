@@ -29,6 +29,7 @@ def get_races(browser, start_date, end_date):
     end = browser.find_element_by_name("dtmax")
     end.clear()
     end.send_keys(end_date)
+    time.sleep(2)
     end.send_keys(u'\ue007')
 
     time.sleep(4)
@@ -79,5 +80,4 @@ def get_races(browser, start_date, end_date):
         max_page = int(float(browser.find_element_by_id('nbpmax').text))
         page_n += 1
 
-    browser.quit()
     return store_race
