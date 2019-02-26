@@ -11,5 +11,6 @@ setup(
     description='Scraping website of ITRA',
     install_requires=[
         "beautifulsoup4",
+        "selenium",
     ],
 )
