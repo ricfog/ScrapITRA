@@ -1,4 +1,4 @@
-from ..src import *
+from ..scrapITRA.src import *
 
 import argparse
 
