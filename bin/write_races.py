@@ -1,5 +1,5 @@
-from ..scrapITRA.src import *
-
+#!/usr/bin/env python
+import scrapITRA as sc
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -13,8 +13,8 @@ browser = get_browser('https://itra.run/community/', False)
 
 try:
    from login_credentials import *
-   login(username, password, browser)
+   sc.login(username, password, browser)
 except ImportError:
     pass
 
-races_info = get_races(browser, args.start_date, args.end_date, args.path)
+races_info = sc.get_races(browser, args.start_date, args.end_date, args.path)

@@ -2,3 +2,4 @@
 setup.py
 bin/write_races.py
 scrapITRA/__init__.py
+scrapITRA/get_browser.py
