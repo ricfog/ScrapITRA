@@ -1,5 +1,7 @@
 # ScrapITRA
 
+Note that ITRA has recently changed its website and this package cannot be used to scrape their current website. I will work towards an update of this package soon. 
+
 Scraping the website of the Internation Trail Running Association (ITRA) with Python.
 
 A presentation of the package with some examples is available <a href=https://github.com/ricfog/ScrapITRA/blob/master/Presentation.pdf>here</a>.
