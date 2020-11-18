@@ -15,7 +15,7 @@ The package can be installed via <code>pip install</code> after downloading the 
  
  We analyse the data set scraped from ITRA in the following paper:
  
-*Fogliato, Riccardo, Natalia L. Oliveira, and Ronald Yurko. "TRAP: A Predictive Framework for Trail Running Assessment of Performance." arXiv preprint arXiv:2002.01328 (2020).* 
+*Fogliato, Riccardo, Natalia L. Oliveira, and Ronald Yurko. "TRAP: a predictive framework for the Assessment of Performance in Trail Running." Journal of Quantitative Analysis in Sports 1.ahead-of-print (2020).* 
 
 Bibtex citation:
 
