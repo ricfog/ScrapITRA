@@ -21,10 +21,13 @@ Bibtex citation:
 
 ```
 @article{fogliato2020trap,
-  title={TRAP: A Predictive Framework for Trail Running Assessment of Performance},
+  title={TRAP: a predictive framework for the Assessment of Performance in Trail Running},
   author={Fogliato, Riccardo and Oliveira, Natalia L and Yurko, Ronald},
-  journal={arXiv preprint arXiv:2002.01328},
-  year={2020}
+  journal={Journal of Quantitative Analysis in Sports},
+  volume={1},
+  number={ahead-of-print},
+  year={2020},
+  publisher={De Gruyter}
 }
 ```
  
